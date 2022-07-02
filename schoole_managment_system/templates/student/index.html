@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+student
+{% endblock %}
+
+{% block content %}
+<h1>student</h1>
+
+
+<form action="" method="post">
+   {% csrf_token %}
+   <input type="text" placeholder="Enter your First Name" name="first_name"> <br>
+   <button type="submit">submit</button>
+</form>
+{% endblock %}
