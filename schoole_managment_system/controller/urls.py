@@ -19,6 +19,6 @@ from django.urls import include, path
 from .views import controller, controller_reistations
 
 urlpatterns = [
-    path('',controller),
-    path('registations/',controller_reistations)
+    path('',controller,name="admin"),
+    path('registations/',controller_reistations,name="registations")
 ]

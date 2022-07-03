@@ -17,7 +17,7 @@ def controller(request):
 
       for data in all_admin_data:
          if data.admin_id==admin_id and data.password==password:
-            return render(request,'controller/data.html',{"admin":data})
+            return render(request,'controller/data.html',{"admin":data,"is_login":True})
          else:
             return render(request,'controller/index.html',{"data":{"data":"Not Found Your Data"}})
    return render(request,'controller/index.html')
