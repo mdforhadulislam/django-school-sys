@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,20 +10,34 @@
    <meta name="keywords" content="school managment system admin student teacher controller" />
    <meta name="description" content="this site is school management system" />
    <title>{% block title %} {% endblock %}</title>
+   <link rel="stylesheet" href="{% static 'output/main.css' %}">
 </head>
 
 <body>
-   {% block content %} {% endblock %}
+
+
+   {% block navbar %}
+
+   {% endblock %}
+
 
    <ul>
       <li><a href="/admin">admin</a></li>
       <li><a href="/">Home</a></li>
       <li><a href="/controller">controller</a></li>
+      <li><a href="/controller/registations">controller registations</a></li>
       <li><a href="/student">student</a></li>
+      <li><a href="/student/registations">student registations</a></li>
       <li><a href="/teacher">teacher</a></li>
    </ul>
+   <br>
+   {% block content %} {% endblock %}
 
+   {% block form %} {% endblock %}
+   <br />
+   {% block sycrect_content %} {% endblock %}
 
 </body>
+
 
 </html>

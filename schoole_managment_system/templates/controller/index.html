@@ -7,3 +7,27 @@ Controller
 {% block content %}
 <h1>Controller</h1>
 {% endblock %}
+
+
+{% block form %}
+
+<form action="" method="post">
+   {% csrf_token %}
+   <fieldset class="module aligned">
+      <div>
+         <label class="required" for="admin_id">Admin Id : </label>
+         <input type="text" name="admin_id" required="" id="admin_id" />
+      </div>
+
+      <div>
+         <label class="required" for="password">Password : </label>
+         <input type="password" name="password" required="" id="password" />
+      </div>
+   </fieldset>
+   <button type="submit">Submit</button>
+</form>
+
+<br />
+<br />
+
+{% endblock %}

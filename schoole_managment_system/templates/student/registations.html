@@ -1,0 +1,232 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Registations
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Registations</h1>
+
+
+{% endblock %}
+
+
+{% block form %}
+
+<form action="" method="post">
+   {% csrf_token %}
+   <fieldset class="module aligned ">
+
+
+
+      <div class="form-row field-profile_image">
+
+
+         <div>
+
+
+            <label class="required" for="id_profile_image">Profile image:</label>
+
+            <input type="file" name="profile_image" accept="image/*" required="" id="id_profile_image">
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-student_id">
+
+
+         <!-- <div>
+
+
+            <label class="required" for="id_student_id">Student id:</label>
+
+            <input type="text" name="student_id" class="vTextField" maxlength="15" required="" id="id_student_id">
+
+
+
+         </div> -->
+
+      </div>
+
+      <div class="form-row field-first_name">
+
+
+         <div>
+
+
+            <label class="required" for="id_first_name">First name:</label>
+
+            <input type="text" name="first_name" class="vTextField" maxlength="15" required="" id="id_first_name">
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-last_name">
+
+
+         <div>
+
+
+            <label class="required" for="id_last_name">Last name:</label>
+
+            <input type="text" name="last_name" class="vTextField" maxlength="15" required="" id="id_last_name">
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-class_number">
+
+
+         <div>
+
+
+            <label class="required" for="id_class_number">Class number:</label>
+
+            <input type="number" name="class_number" class="vIntegerField" required="" id="id_class_number">
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-roll_number">
+
+
+         <div>
+
+
+            <label class="required" for="id_roll_number">Roll number:</label>
+
+            <input type="number" name="roll_number" class="vIntegerField" required="" id="id_roll_number">
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-phone_number">
+
+
+         <div>
+
+
+            <label class="required" for="id_phone_number">Phone number:</label>
+
+            <input type="text" name="phone_number" class="vTextField" maxlength="14" required="" id="id_phone_number">
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-email_address">
+
+
+         <div>
+
+
+            <label class="required" for="id_email_address">Email address:</label>
+
+            <input type="text" name="email_address" class="vTextField" maxlength="30" required="" id="id_email_address">
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-present_address">
+
+
+         <div>
+
+
+            <label class="required" for="id_present_address">Present address:</label>
+
+            <textarea name="present_address" cols="40" rows="10" class="vLargeTextField" maxlength="1000" required=""
+               id="id_present_address"></textarea>
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-permanent_address">
+
+
+         <div>
+
+
+            <label class="required" for="id_permanent_address">Permanent address:</label>
+
+            <textarea name="permanent_address" cols="40" rows="10" class="vLargeTextField" maxlength="1000" required=""
+               id="id_permanent_address"></textarea>
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-password">
+
+
+         <div>
+
+
+            <label class="required" for="id_password">Password:</label>
+
+            <input type="text" name="password" class="vTextField" maxlength="100" required="" id="id_password">
+
+
+
+         </div>
+
+      </div>
+
+      <div class="form-row field-re_password">
+
+
+         <div>
+
+
+            <label class="required" for="id_re_password">Re password:</label>
+
+            <input type="text" name="re_password" class="vTextField" maxlength="100" required="" id="id_re_password">
+
+
+
+         </div>
+
+      </div>
+
+   </fieldset>
+
+   <div class="submit-row">
+
+      <input type="submit" value="Save" class="default" name="_save">
+
+   </div>
+
+
+</form>
+
+{% endblock %}
+
+
+

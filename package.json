@@ -1,0 +1,31 @@
+{
+  "name": "school-managment-system",
+  "version": "1.0.0",
+  "description": "This application working with school management system",
+  "main": "no js file",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tailwindcss -i ./schoole_managment_system/static/input/main.css -o ./schoole_managment_system/static/output/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdforhadulislam/django-school-sys.git"
+  },
+  "keywords": [
+    "school",
+    "management",
+    "system"
+  ],
+  "author": "Forhadul Islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdforhadulislam/django-school-sys/issues"
+  },
+  "homepage": "https://github.com/mdforhadulislam/django-school-sys#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
+  },
+  "dependencies": {
+    "flowbite": "^1.4.7"
+  }
+}

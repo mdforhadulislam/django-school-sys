@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+{{admin.first_name}} {{admin.last_name}}
+{% endblock %}
+
+{% block content %}
+<h1>{{admin.first_name}} {{admin.last_name}}</h1>
+
+<div>
+   <h2>Deatils</h2>
+
+   <table border="1">
+      <tbody>
+         <tr>
+            <td>
+               <b>Profile Image</b>
+            </td>
+            <td>
+               <img src="/media/{{admin.profile_image}}" alt="{{admin.first_name}}"
+                  style="width: 150px; height: 220px" />
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Admin Id</b>
+            </td>
+            <td>
+               <p>{{admin.admin_id}}</p>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Name</b>
+            </td>
+            <td>
+               <p>{{admin.first_name}} {{admin.last_name}}</p>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Phone Number</b>
+            </td>
+            <td>
+               <p>{{admin.phone_number}}</p>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Email Address</b>
+            </td>
+            <td>
+               <p>{{admin.email_address}}</p>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Present Address</b>
+            </td>
+            <td>
+               <p>{{admin.present_address}}</p>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Permanent Address</b>
+            </td>
+            <td>
+               <p>{{admin.permanent_address}}</p>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+<br />
+<br />
+{% endblock %}
+
+
+{% block sycrect_content %}
+
+<ul>
+   <li><a href="">Notice Add</a></li>
+   <li><a href="">Month Add</a></li>
+   <li><a href="">Class Add</a></li>
+   <li><a href="">Subject Add</a></li>
+   <li><a href="">Exam Routine Add</a></li>
+   <li><a href="">Routine Add</a></li>
+   <li><a href="">Student Payments Add</a></li>
+   <li><a href="">Teacher Payments Add</a></li>
+</ul>
+
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+{{student.first_name}} {{student.last_name}}
+{% endblock %}
+
+
+{% block content %}
+<h1>{{student.first_name}} {{student.last_name}}</h1>
+
+<div>
+   <h2>Deatils</h2>
+
+   <table border="1">
+
+      <tbody>
+
+         <tr>
+            <td>
+               <b>Profile Image</b>
+            </td>
+            <td>
+               <img src="/media/{{student.profile_image}}" alt="{{student.first_name}}" style="width: 150px;
+                  height:220px;">
+            </td>
+         </tr>
+
+
+         <tr>
+            <td>
+               <b>Student Id</b>
+            </td>
+            <td>
+               <p>{{student.student_id}}</p>
+            </td>
+         </tr>
+
+
+         <tr>
+            <td>
+               <b>Name</b>
+            </td>
+            <td>
+               <p>{{student.first_name}} {{student.last_name}}</p>
+            </td>
+         </tr>
+
+
+         <tr>
+            <td>
+               <b>Class</b>
+            </td>
+            <td>
+               <p>{{student.class_number}} </p>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Roll Number</b>
+            </td>
+            <td>
+               <p>{{student.roll_number}} </p>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Phone Number</b>
+            </td>
+            <td>
+               <p>{{student.phone_number}} </p>
+            </td>
+         </tr>
+
+
+         <tr>
+            <td>
+               <b>Email Address</b>
+            </td>
+            <td>
+               <p>{{student.email_address}} </p>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Present Address</b>
+            </td>
+            <td>
+               <p>{{student.present_address}} </p>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <b>Permanent Address</b>
+            </td>
+            <td>
+               <p>{{student.permanent_address}} </p>
+            </td>
+         </tr>
+
+
+
+      </tbody>
+
+
+   </table>
+
+
+</div>
+
+<br>
+<br>
+
+{% endblock %}
+
+
+{% block navbar %}
+
+{% endblock %}

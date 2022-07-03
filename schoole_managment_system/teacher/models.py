@@ -12,6 +12,8 @@ class Teacher(models.Model):
    email_address = models.CharField(max_length=30)
    present_address = models.TextField(max_length=1000)
    permanent_address = models.TextField(max_length=1000)
+   password = models.CharField(max_length=100)
+   re_password = models.CharField(max_length=100)
 
    def __str__(self):
       return f'{self.first_name} {self.last_name}'
