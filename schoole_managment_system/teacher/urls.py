@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from .views import teacher
+from .views import teacher,registations
 
 urlpatterns = [
-    path('',teacher)
+    path('',teacher,name="teacher"),
+    path('registations',registations,name="registations")
 ]

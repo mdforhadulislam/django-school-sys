@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from .views import controller, controller_reistations
+from .views import controller, controller_reistations, forgot_password
 
 urlpatterns = [
     path('',controller,name="admin"),
-    path('registations/',controller_reistations,name="registations")
+    path('registations/',controller_reistations,name="admin_registations"),
+    path('forgot-password/',forgot_password,name="forgot_password")
 ]

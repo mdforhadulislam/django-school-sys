@@ -42,3 +42,7 @@ def controller_reistations(request):
       data.save()
 
    return render(request,'controller/registations.html')
+
+
+def forgot_password(request):
+   return render(request,'controller/forgot-password.html')

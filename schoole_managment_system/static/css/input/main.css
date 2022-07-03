@@ -69,3 +69,31 @@
 /* from design  end  */
 /* from design  end  */
 /* from design  end  */
+
+/* css registation from start  */
+/* css registation from start  */
+/* css registation from start  */
+/* css registation from start  */
+
+:root {
+  --main-blue: #71b7e6;
+  --main-purple: #9b59b6;
+  --main-grey: #ccc;
+  --sub-grey: #d9d9d9;
+}
+
+/* containers and form */
+.title::before {
+  content: "";
+  position: absolute;
+  height: 3.5px;
+  width: 30px;
+  background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+  left: 0;
+  bottom: 0;
+}
+
+/* css registation from end  */
+/* css registation from end  */
+/* css registation from end  */
+/* css registation from end  */
