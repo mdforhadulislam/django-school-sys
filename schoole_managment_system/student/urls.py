@@ -20,5 +20,5 @@ from .views import student, student__registations
 
 urlpatterns = [
     path('',student,name="student"),
-    path('registations/',student__registations,name="registations")
+    path('registations/',student__registations,name="student__registations")
 ]

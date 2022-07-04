@@ -5,228 +5,77 @@ Registations
 {% endblock %}
 
 
-{% block content %}
-
-<h1>Registations</h1>
-
-
-{% endblock %}
-
-
 {% block form %}
 
-<form action="" method="post">
-   {% csrf_token %}
-   <fieldset class="module aligned ">
+<div class="flex h-full justify-center items-center py-12" style="background: linear-gradient(135deg,#71b7e6,#9b59b6);">
+   <div class="max-w-[700px] bg-white px-6 py-8 rounded-md">
+      <div class="p-2 border-b-4 border-violet-600">
+         <div class="title text-4xl text-center relative font-bold ">Student Registration</div>
+      </div>
+      <form action="" method="POST">
+         {% csrf_token %}
+         <div class="flex flex-wrap justify-between mt-8 mb-3">
 
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">First Name</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="text"
+                  placeholder="John" name="first_name" required>
+            </div>
 
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Last Name</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="text"
+                  placeholder="Smith" name="last_name" required>
+            </div>
 
-      <div class="form-row field-profile_image">
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Email</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="email"
+                  placeholder="johnsmith@hotmail.com" name="email_address" required>
+            </div>
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Phone Number</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="tel"
+                  placeholder="012-345-6789" name="phone_number" required>
+            </div>
 
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Present Address</span>
+               <textarea class="h-[80px] w-full outline-none rounded-md border pl-4 text-base transition-all"
+                  name="present_address" required></textarea>
+            </div>
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Permanent Address</span>
+               <textarea class="h-[80px] w-full outline-none rounded-md border pl-4 text-base transition-all"
+                  name="permanent_address" required></textarea>
+            </div>
 
-         <div>
+            <div class="w-full mb-4">
+               <span class="font-medium mb-[6px] block">Profile Image</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="file"
+                  name="profile_image" placeholder="********" required>
+            </div>
 
-
-            <label class="required" for="id_profile_image">Profile image:</label>
-
-            <input type="file" name="profile_image" accept="image/*" required="" id="id_profile_image">
-
-
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Password</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all"
+                  name="password" type="password" placeholder="********" required>
+            </div>
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Confirm Password</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all"
+                  name="re_password" type="password" placeholder="********" required>
+            </div>
 
          </div>
 
-      </div>
-
-      <div class="form-row field-student_id">
-
-
-         <!-- <div>
-
-
-            <label class="required" for="id_student_id">Student id:</label>
-
-            <input type="text" name="student_id" class="vTextField" maxlength="15" required="" id="id_student_id">
-
-
-
-         </div> -->
-
-      </div>
-
-      <div class="form-row field-first_name">
-
-
-         <div>
-
-
-            <label class="required" for="id_first_name">First name:</label>
-
-            <input type="text" name="first_name" class="vTextField" maxlength="15" required="" id="id_first_name">
-
-
-
+         <div class="h-[50px] my-[30px]">
+            <input class="w-full h-full outline-none text-white border-none text-lg font-medium rounded-md "
+               style="background:  linear-gradient(135deg,#71b7e6,#9b59b6);" type="submit" value="Register">
          </div>
-
-      </div>
-
-      <div class="form-row field-last_name">
-
-
-         <div>
-
-
-            <label class="required" for="id_last_name">Last name:</label>
-
-            <input type="text" name="last_name" class="vTextField" maxlength="15" required="" id="id_last_name">
-
-
-
-         </div>
-
-      </div>
-
-      <div class="form-row field-class_number">
-
-
-         <div>
-
-
-            <label class="required" for="id_class_number">Class number:</label>
-
-            <input type="number" name="class_number" class="vIntegerField" required="" id="id_class_number">
-
-
-
-         </div>
-
-      </div>
-
-      <div class="form-row field-roll_number">
-
-
-         <div>
-
-
-            <label class="required" for="id_roll_number">Roll number:</label>
-
-            <input type="number" name="roll_number" class="vIntegerField" required="" id="id_roll_number">
-
-
-
-         </div>
-
-      </div>
-
-      <div class="form-row field-phone_number">
-
-
-         <div>
-
-
-            <label class="required" for="id_phone_number">Phone number:</label>
-
-            <input type="text" name="phone_number" class="vTextField" maxlength="14" required="" id="id_phone_number">
-
-
-
-         </div>
-
-      </div>
-
-      <div class="form-row field-email_address">
-
-
-         <div>
-
-
-            <label class="required" for="id_email_address">Email address:</label>
-
-            <input type="text" name="email_address" class="vTextField" maxlength="30" required="" id="id_email_address">
-
-
-
-         </div>
-
-      </div>
-
-      <div class="form-row field-present_address">
-
-
-         <div>
-
-
-            <label class="required" for="id_present_address">Present address:</label>
-
-            <textarea name="present_address" cols="40" rows="10" class="vLargeTextField" maxlength="1000" required=""
-               id="id_present_address"></textarea>
-
-
-
-         </div>
-
-      </div>
-
-      <div class="form-row field-permanent_address">
-
-
-         <div>
-
-
-            <label class="required" for="id_permanent_address">Permanent address:</label>
-
-            <textarea name="permanent_address" cols="40" rows="10" class="vLargeTextField" maxlength="1000" required=""
-               id="id_permanent_address"></textarea>
-
-
-
-         </div>
-
-      </div>
-
-      <div class="form-row field-password">
-
-
-         <div>
-
-
-            <label class="required" for="id_password">Password:</label>
-
-            <input type="text" name="password" class="vTextField" maxlength="100" required="" id="id_password">
-
-
-
-         </div>
-
-      </div>
-
-      <div class="form-row field-re_password">
-
-
-         <div>
-
-
-            <label class="required" for="id_re_password">Re password:</label>
-
-            <input type="text" name="re_password" class="vTextField" maxlength="100" required="" id="id_re_password">
-
-
-
-         </div>
-
-      </div>
-
-   </fieldset>
-
-   <div class="submit-row">
-
-      <input type="submit" value="Save" class="default" name="_save">
-
+      </form>
    </div>
+</div>
 
-
-</form>
 
 {% endblock %}
-
-
-

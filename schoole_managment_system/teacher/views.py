@@ -21,7 +21,7 @@ def teacher(request):
    return render(request,'teacher/index.html')
 
 
-def registations(request):
+def teacher_registations(request):
    if request.method=="POST":
       profile_image = request.POST.get("profile_image")
       first_name = request.POST.get("first_name")

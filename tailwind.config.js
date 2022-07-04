@@ -1,6 +1,6 @@
 // /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./schoole_managment_system/templates/**/*{html,js}", "./node_modules/flowbite/**/*.js"],
+  content: ["./schoole_managment_system/templates/**/*.{html,js}"],
   theme: {
 
     extend: {

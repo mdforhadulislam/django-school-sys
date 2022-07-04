@@ -1,7 +1,82 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+Registations
+{% endblock %}
 
 
 
+{% block form %}
 
+<div class="flex h-full justify-center items-center py-6" style="background: linear-gradient(135deg,#71b7e6,#9b59b6);">
+   <div class="max-w-[700px] bg-white px-6 py-8 rounded-md">
+      <div class="p-2 border-b-4 border-violet-600">
+         <div class="title text-4xl text-center relative font-bold ">Teacher Registration</div>
+      </div>
+      <form action="" method="POST">
+         {% csrf_token %}
+         <div class="flex flex-wrap justify-between mt-8 mb-3">
 
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">First Name</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="text"
+                  placeholder="John" name="first_name" required>
+            </div>
 
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Last Name</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="text"
+                  placeholder="Smith" name="last_name" required>
+            </div>
 
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Email</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="email"
+                  placeholder="johnsmith@hotmail.com" name="email_address" required>
+            </div>
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Phone Number</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="tel"
+                  placeholder="012-345-6789" name="phone_number" required>
+            </div>
+
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Present Address</span>
+               <textarea class="h-[80px] w-full outline-none rounded-md border pl-4 text-base transition-all"
+                  name="present_address" required></textarea>
+            </div>
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Permanent Address</span>
+               <textarea class="h-[80px] w-full outline-none rounded-md border pl-4 text-base transition-all"
+                  name="permanent_address" required></textarea>
+            </div>
+
+            <div class="w-full mb-4">
+               <span class="font-medium mb-[6px] block">Profile Image</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all" type="file"
+                  name="profile_image" placeholder="********" required>
+            </div>
+
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Password</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all"
+                  name="password" type="password" placeholder="********" required>
+            </div>
+            <div class="w-[49%] mb-4">
+               <span class="font-medium mb-[6px] block">Confirm Password</span>
+               <input class="h-[45px] w-full outline-none rounded-md border pl-4 text-base transition-all"
+                  name="re_password" type="password" placeholder="********" required>
+            </div>
+
+         </div>
+
+         <div class="h-[50px] my-[30px]">
+            <input class="w-full h-full outline-none text-white border-none text-lg font-medium rounded-md "
+               style="background:  linear-gradient(135deg,#71b7e6,#9b59b6);" type="submit" value="Register">
+         </div>
+      </form>
+   </div>
+</div>
+
+{% endblock %}

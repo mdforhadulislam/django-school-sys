@@ -5,7 +5,7 @@
   "main": "no js file",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tailwindcss -i ./schoole_managment_system/static/css/input/main.css -o ./schoole_managment_system/static/css/output/main.css --watch"
+    "start": "npx tailwindcss -i ./schoole_managment_system/static/css/input.css -o ./schoole_managment_system/static/css/output.css --watch"
   },
   "repository": {
     "type": "git",
