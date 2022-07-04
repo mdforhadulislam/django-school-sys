@@ -31,6 +31,7 @@ def controller_reistations(request):
       last_name = request.POST.get("last_name")
       phone_number = request.POST.get("phone_number")
       email_address = request.POST.get("email_address")
+      instation_name = request.POST.get("instation_name")
       present_address = request.POST.get("present_address")
       permanent_address = request.POST.get("permanent_address")
       password = request.POST.get("password")
@@ -38,7 +39,7 @@ def controller_reistations(request):
       id = int(random.random()*1000)
       admin_id = f'{first_name}-{last_name}-{id}'
 
-      data = Admin(id,profile_image,admin_id,first_name,last_name,phone_number,email_address,present_address,permanent_address,password,re_password)
+      data = Admin(id,profile_image,admin_id,first_name,last_name,phone_number,email_address,instation_name,present_address,permanent_address,password,re_password)
       data.save()
 
    return render(request,'controller/registations.html')

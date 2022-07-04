@@ -31,6 +31,7 @@ def student__registations(request):
       roll_number = request.POST.get('roll_number')
       phone_number = request.POST.get('phone_number')
       email_address = request.POST.get('email_address')
+      enter_your_admin_id = request.POST.get('admin_id')
       present_address = request.POST.get('present_address')
       permanent_address = request.POST.get('permanent_address')
       password = request.POST.get('password')

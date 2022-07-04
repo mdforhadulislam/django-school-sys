@@ -1,3 +1,4 @@
+from controller.models import Admin
 from django.db import models
 from rootapp.models import Class, Day, Month, SubjectName
 
@@ -12,6 +13,7 @@ class Student(models.Model):
    roll_number = models.IntegerField()
    phone_number = models.CharField(max_length=14)
    email_address = models.CharField(max_length=30)
+   enter_your_admin_id = models.ForeignKey(Admin,on_delete=models.SET_NULL, null=True)
    present_address = models.TextField(max_length=1000)
    permanent_address = models.TextField(max_length=1000)
    password = models.CharField(max_length=100)
