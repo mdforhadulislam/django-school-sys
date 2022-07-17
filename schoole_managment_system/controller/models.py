@@ -1,4 +1,5 @@
 from django.db import models
+from rootapp.models import Instation
 
 
 # Create your models here.
@@ -8,7 +9,7 @@ class Admin(models.Model):
    first_name = models.CharField(max_length=15)
    last_name = models.CharField(max_length=15)
    phone_number = models.CharField(max_length=14)
-   instation_name = models.CharField(max_length=100)
+   instation_name = models.ForeignKey(Instation,on_delete=models.SET_NULL, null=True)
    email_address = models.CharField(max_length=30)
    present_address = models.TextField(max_length=1000)
    permanent_address = models.TextField(max_length=1000)

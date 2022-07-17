@@ -35,6 +35,12 @@ class Month(models.Model):
       return self.title
 
 
+class Instation(models.Model):
+   title = models.CharField(max_length=100)
+   def __str__(self):
+      return self.title
+
+
 # Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday
 
 
