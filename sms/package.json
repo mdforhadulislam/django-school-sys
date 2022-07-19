@@ -28,5 +28,8 @@
   "homepage": "https://github.com/mdforhadulislam/django-school-sys#readme",
   "devDependencies": {
     "tailwindcss": "^3.1.6"
+  },
+  "dependencies": {
+    "flowbite": "^1.4.7"
   }
 }
