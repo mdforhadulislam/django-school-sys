@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+
+
+{% block main %}
+<div class="container m-auto">
+
+
+   <div class="w-full h-auto md:flex justify-around items-center align-middle sm:block">
+
+      <div class="p-10">
+         <a href="{% url 'authorLogin' %}">
+            <div
+               class="cursor-pointer block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 m-auto">
+               <img src="{% static 'assets/icon/author.svg' %}" alt="Admin">
+               <h1 class="font-semibold text-4xl pt-2">Admin</h1>
+            </div>
+         </a>
+      </div>
+
+      <div class="p-10">
+         <a href="{% url 'teacherLogin' %}">
+            <div
+               class="cursor-pointer block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 m-auto">
+               <img src="{% static 'assets/icon/teacher.svg' %}" alt="Admin">
+               <h1 class="font-semibold text-4xl pt-2">Teacher</h1>
+            </div>
+         </a>
+      </div>
+
+
+
+      <div class="p-10">
+         <a href="{% url 'studentLogin' %}">
+            <div
+               class="cursor-pointer block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 m-auto">
+               <img src="{% static 'assets/icon/student.svg' %}" alt="Admin">
+               <h1 class="font-semibold text-4xl pt-2">Student</h1>
+            </div>
+         </a>
+      </div>
+
+   </div>
+
+
+
+</div>
+{% endblock main %}

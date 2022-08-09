@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+
+
+{% block title %}
+Author Login
+{% endblock title %}
+
+
+
+{% block main %}
+<div class="p-5 flex justify-center align-middle items-center">
+   <form class="border shadow-4xl rounded p-5" action="{% url 'authorLogin' %}" method="post">
+      {% csrf_token %}
+      <div>
+         <label for="username">Username :</label>
+         <input class="border" type="text" name="username" id="username" />
+      </div>
+
+      <div>
+         <label for="password">Password :</label>
+         <input class="border" type="text" name="password" id="password" />
+      </div>
+
+      <button class="w-auto p-2 bg-sky-500 text-white shadow-3xl rounded" type="submit">Submit</button>
+   </form>
+</div>
+{% endblock main %}
